@@ -1,11 +1,10 @@
 package com.example.exubit.dep;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import com.example.chat.ChatText;
-import com.example.common.Common;
 import com.example.common.CommonText;
 import com.example.geoservice.GeoText;
 

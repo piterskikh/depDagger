@@ -4,9 +4,6 @@ import com.example.chat.Chat;
 import com.example.chat.ChatComponent;
 import com.example.chat.ChatText;
 import com.example.common.scope.ApplicationScope;
-import com.example.geoservice.Geo;
-import com.example.geoservice.GeoComponent;
-import com.example.geoservice.GeoText;
 
 import dagger.Module;
 import dagger.Provides;

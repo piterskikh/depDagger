@@ -5,12 +5,11 @@ import com.example.geoservice.Geo;
 import com.example.geoservice.GeoComponent;
 import com.example.geoservice.GeoText;
 
-
 import dagger.Module;
 import dagger.Provides;
 
 @Module
-public class AppGeoModule implements Geo.GeotModuleInterface{
+public class AppGeoModule implements Geo.GeoModuleInterface {
 
     private GeoComponent geoComponent = Geo.getGeoComponent();
 

@@ -1,26 +1,24 @@
 package com.example.geoservice;
 
-import com.example.common.Common;
-
 
 public class Geo {
 
     private static GeoComponent geoComponent;
 
 
-    public static void setGeoComponent(GeoComponent geoComponentValue) {
-        geoComponent = geoComponentValue;
+    private Geo() {
     }
 
     public static GeoComponent getGeoComponent(){
         return geoComponent;
     }
 
-    private Geo() {
+    public static void setGeoComponent(GeoComponent geoComponentValue) {
+        geoComponent = geoComponentValue;
     }
 
 
-    public interface GeotModuleInterface {
+    public interface GeoModuleInterface {
         GeoText getGeoText();
     }
 }

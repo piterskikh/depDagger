@@ -3,13 +3,12 @@ package com.example.geoservice;
 
 import com.example.common.scope.GeoScope;
 
-
 import dagger.Module;
 import dagger.Provides;
 
 
 @Module
-public class GeoModule implements Geo.GeotModuleInterface{
+class GeoModule implements Geo.GeoModuleInterface {
 
     @Override
     @GeoScope

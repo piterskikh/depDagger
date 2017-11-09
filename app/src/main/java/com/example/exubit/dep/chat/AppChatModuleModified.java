@@ -5,8 +5,6 @@ package com.example.exubit.dep.chat;
 import com.example.chat.Chat;
 import com.example.chat.ChatText;
 import com.example.common.scope.ChatScope;
-import com.example.common.scope.GeoScope;
-import com.example.geoservice.GeoText;
 
 import dagger.Module;
 import dagger.Provides;
