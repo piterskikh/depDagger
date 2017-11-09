@@ -7,9 +7,16 @@ android {
         applicationId "com.example.exubit.dep"
         minSdkVersion 20
         targetSdkVersion 26
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moxyReflectorPackage: 'com.example.exubit.dep']
+            }
+        }
      }
 
- }
+
+}
 
 
 
@@ -21,6 +28,9 @@ dependencies {
     annotationProcessor "com.google.dagger:dagger-compiler:$project.ext.dagger2"
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.arello-mobile:moxy:1.5.3'
+    compile "com.arello-mobile:moxy-app-compat:1.5.3"
     annotationProcessor "com.arello-mobile:moxy-compiler:1.5.3"
+
 
 }

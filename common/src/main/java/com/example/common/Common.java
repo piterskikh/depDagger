@@ -1,18 +1,19 @@
 package com.example.common;
 
+
 public class Common {
 
     private static CommonComponent commonComponent;
 
-    static public void setCommonComponent(CommonComponent commonComponentValue){
-        commonComponent = commonComponentValue;
+    private Common() {
     }
 
     static public CommonComponent getCommonComponent(){
         return commonComponent;
     }
 
-    private Common() {
+    static public void setCommonComponent(CommonComponent commonComponentValue) {
+        commonComponent = commonComponentValue;
     }
 
 

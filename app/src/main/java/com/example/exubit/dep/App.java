@@ -2,19 +2,21 @@ package com.example.exubit.dep;
 
 import android.app.Application;
 
+import com.arellomobile.mvp.RegisterMoxyReflectorPackages;
 import com.example.chat.Chat;
 import com.example.chat.ChatComponent;
 import com.example.common.Common;
 import com.example.common.CommonComponent;
 import com.example.exubit.dep.chat.AppChatModuleModified;
+import com.example.exubit.dep.chat.DaggerAppChatComponent;
 import com.example.exubit.dep.common.AppCommonModuleModified;
 import com.example.exubit.dep.common.DaggerAppCommonComponent;
 import com.example.exubit.dep.geoservice.AppGeoModuleModified;
 import com.example.exubit.dep.geoservice.DaggerAppGeoComponent;
-import com.example.exubit.dep.chat.DaggerAppChatComponent;
 import com.example.geoservice.Geo;
 import com.example.geoservice.GeoComponent;
 
+@RegisterMoxyReflectorPackages({"com.example.exubit.dep", "com.example.chat"})
 public class App extends Application {
 
     private static AppComponent appComponent;

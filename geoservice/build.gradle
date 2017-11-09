@@ -8,6 +8,12 @@ android {
     defaultConfig {
         minSdkVersion 20
         targetSdkVersion 26
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moxyReflectorPackage: 'com.example.chat']
+            }
+        }
     }
 
 }
@@ -15,5 +21,5 @@ android {
 dependencies {
     compile project(':common')
     annotationProcessor "com.google.dagger:dagger-compiler:$project.ext.dagger2"
-    annotationProcessor "com.arello-mobile:moxy-compiler:1.5.3"
+    // annotationProcessor "com.arello-mobile:moxy-compiler:1.5.3"
 }
