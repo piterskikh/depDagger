@@ -24,6 +24,9 @@ public class MainActivity extends AppCompatActivity {
     @Inject
     ChatText chatText;
 
+    @Inject
+    AppText appText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         String textFromCommon = commonText.getText();
         String textFromGeo = geoText.getText();
         String textFromChat = chatText.getText();
+        String textFromApp = appText.getText();
 
 
 
@@ -45,5 +49,8 @@ public class MainActivity extends AppCompatActivity {
         textView.append("\n");
         textView.append("\n");
         textView.append(textFromChat);
+        textView.append("\n");
+        textView.append("\n");
+        textView.append(textFromApp);
     }
 }
