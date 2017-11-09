@@ -1,18 +1,20 @@
 package com.example.exubit.dep;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
+import com.arellomobile.mvp.MvpAppCompatActivity;
+import com.arellomobile.mvp.presenter.InjectPresenter;
 import com.example.chat.ChatText;
 import com.example.common.CommonText;
 import com.example.geoservice.GeoText;
 
 import javax.inject.Inject;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends MvpAppCompatActivity implements TestInterface {
 
-
+    @InjectPresenter
+    Presenter presenter;
 
     @Inject
     CommonText commonText;
@@ -26,12 +28,14 @@ public class MainActivity extends AppCompatActivity {
     @Inject
     AppText appText;
 
+    TextView textView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView textView = (TextView) findViewById(R.id.plainText);
+        textView = (TextView) findViewById(R.id.plainText);
         App.getAppComponent().inject(this);
 
         String textFromCommon = commonText.getText();
@@ -51,5 +55,16 @@ public class MainActivity extends AppCompatActivity {
         textView.append("\n");
         textView.append("\n");
         textView.append(textFromApp);
+
+        presenter.setTextOnActivity();
+    }
+
+    @Override
+    public void setTextAct(String str) {
+
+        textView.append("\n");
+        textView.append("\n");
+        textView.append(str);
+
     }
 }

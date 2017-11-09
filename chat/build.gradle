@@ -16,5 +16,6 @@ android {
 dependencies {
     compile project(':common')
     annotationProcessor "com.google.dagger:dagger-compiler:$project.ext.dagger2"
+    annotationProcessor "com.arello-mobile:moxy-compiler:1.5.3"
 
 }
