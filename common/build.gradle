@@ -1,0 +1,20 @@
+apply plugin: 'com.android.library'
+
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+
+    defaultConfig {
+        minSdkVersion 20
+        targetSdkVersion 26
+    }
+
+
+}
+
+
+dependencies {
+    compile "com.google.dagger:dagger:$project.ext.dagger2"
+    annotationProcessor "com.google.dagger:dagger-compiler:$project.ext.dagger2"
+}

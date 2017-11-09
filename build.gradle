@@ -1,0 +1,23 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.3'
+    }
+}
+
+allprojects {
+    allprojects {
+        repositories {
+            jcenter()
+            mavenCentral()
+            mavenLocal()
+        }
+
+        project.ext {
+            dagger2 = '2.+'
+        }
+    }
+
+}

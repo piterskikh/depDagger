@@ -1,0 +1,25 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+    defaultConfig {
+        applicationId "com.example.exubit.dep"
+        minSdkVersion 20
+        targetSdkVersion 26
+     }
+
+ }
+
+
+
+
+dependencies {
+
+    compile project(':geoservice')
+    compile project(':chat')
+    annotationProcessor "com.google.dagger:dagger-compiler:$project.ext.dagger2"
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+
+}
